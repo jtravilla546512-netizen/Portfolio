@@ -23,7 +23,7 @@
 	}
 
 	::selection {
-		background: rgba(99, 102, 241, 0.35);
+		background: rgba(153, 3, 3, 0.45);
 		color: white;
 	}
 }
@@ -35,20 +35,20 @@
 
 	.hero-grid {
 		background-image:
-			radial-gradient(circle at top left, rgba(99, 102, 241, 0.22), transparent 32%),
-			radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.18), transparent 30%),
-			linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.96));
+			radial-gradient(circle at top left, rgba(153, 3, 3, 0.28), transparent 36%),
+			radial-gradient(circle at bottom right, rgba(100, 0, 0, 0.20), transparent 32%),
+			linear-gradient(180deg, rgba(41, 35, 35, 0.92), rgba(20, 12, 12, 0.97));
 	}
 
 	.subtle-grid {
 		background-image:
-			linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+			linear-gradient(rgba(156, 153, 153, 0.06) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(156, 153, 153, 0.06) 1px, transparent 1px);
 		background-size: 28px 28px;
 	}
 
 	.animated-gradient {
-		background: linear-gradient(-45deg, #0f172a, #111827, #312e81, #4c1d95);
+		background: linear-gradient(-45deg, #292323, #1c1515, #5c0202, #3d0101);
 		background-size: 400% 400%;
 		animation: gradientShift 18s ease infinite;
 	}

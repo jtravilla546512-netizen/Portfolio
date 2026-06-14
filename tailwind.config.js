@@ -5,10 +5,8 @@ import forms from '@tailwindcss/forms';
 export default {
     darkMode: 'class',
     content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-        './resources/js/**/*.jsx',
+        './index.html',
+        './resources/js/**/*.{js,jsx}',
     ],
 
     theme: {
@@ -18,17 +16,47 @@ export default {
                 mono: ['"Fira Code"', ...defaultTheme.fontFamily.mono],
             },
             colors: {
-                accent: {
-                    50: '#eef2ff',
-                    100: '#e0e7ff',
-                    200: '#c7d2fe',
-                    300: '#a5b4fc',
-                    400: '#818cf8',
-                    500: '#6366f1',
-                    600: '#4f46e5',
-                    700: '#4338ca',
-                    800: '#3730a3',
-                    900: '#312e81',
+                // Remap slate → warm dark greys (ties into #292323 background)
+                slate: {
+                    50:  '#f5f4f4',
+                    100: '#e8e5e5',
+                    200: '#ccc9c9',
+                    300: '#b5b0b0',
+                    400: '#9c9999',  // #9c9999
+                    500: '#857878',
+                    600: '#71706e',  // #71706e
+                    700: '#524848',
+                    800: '#3d3333',
+                    900: '#2e2626',
+                    950: '#292323',  // #292323 — main background
+                },
+                // Remap indigo → red accent (#990303)
+                indigo: {
+                    50:  '#fef2f2',
+                    100: '#fee2e2',
+                    200: '#fecaca',
+                    300: '#e07070',
+                    400: '#c44040',
+                    500: '#990303',  // #990303 — primary accent
+                    600: '#7a0202',
+                    700: '#5c0202',
+                    800: '#3d0101',
+                    900: '#2d0101',
+                    950: '#1a0000',
+                },
+                // Remap violet → deeper red
+                violet: {
+                    50:  '#fef2f2',
+                    100: '#fee2e2',
+                    200: '#fecaca',
+                    300: '#f87171',
+                    400: '#a82020',
+                    500: '#850202',
+                    600: '#660202',
+                    700: '#4d0101',
+                    800: '#330101',
+                    900: '#1a0000',
+                    950: '#0d0000',
                 },
             },
         },
