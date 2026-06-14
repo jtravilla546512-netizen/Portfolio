@@ -13,7 +13,7 @@ export default function HeroSection({ hero, socials, roles, onNavigate }) {
     return (
         <section
             id="hero"
-            className="hero-grid relative flex min-h-screen items-center overflow-hidden px-4 pb-20 pt-28 md:px-6 lg:px-8 lg:pt-32"
+            className="hero-grid relative flex min-h-screen items-center px-4 pb-28 pt-28 md:px-6 lg:px-8 lg:pt-32"
         >
             <div className="subtle-grid pointer-events-none absolute inset-0 opacity-20" />
             <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">

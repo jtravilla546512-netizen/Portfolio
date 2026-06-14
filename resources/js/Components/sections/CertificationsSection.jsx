@@ -26,7 +26,7 @@ export default function CertificationsSection({ certifications }) {
     const [expanded, setExpanded] = useState(false);
     const [selected, setSelected] = useState(null);
 
-    const visibleCertifications = expanded ? certifications : certifications.slice(0, 2);
+    const visibleCertifications = expanded ? certifications : certifications.slice(0, 4);
 
     return (
         <RevealSection id="certifications" className="px-4 py-24 md:px-6 lg:px-8">
@@ -45,15 +45,17 @@ export default function CertificationsSection({ certifications }) {
                     ))}
                 </div>
 
-                <div className="mt-6">
-                    <button
-                        type="button"
-                        onClick={() => setExpanded((current) => !current)}
-                        className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-slate-100 transition hover:border-indigo-400/40 hover:bg-white/10"
-                    >
-                        View All
-                    </button>
-                </div>
+                {certifications.length > 4 && (
+                    <div className="mt-6">
+                        <button
+                            type="button"
+                            onClick={() => setExpanded((current) => !current)}
+                            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-slate-100 transition hover:border-indigo-400/40 hover:bg-white/10"
+                        >
+                            {expanded ? 'Show Less' : `View All ${certifications.length}+`}
+                        </button>
+                    </div>
+                )}
 
                 <Modal show={Boolean(selected)} onClose={() => setSelected(null)} maxWidth="lg">
                     {selected ? (

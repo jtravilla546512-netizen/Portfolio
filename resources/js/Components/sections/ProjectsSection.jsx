@@ -33,10 +33,16 @@ function ProjectCard({ project }) {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                    <a href={project.liveUrl} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:opacity-90">
-                        Live Link <ExternalLink className="h-4 w-4" />
-                    </a>
-                    <a href={project.githubUrl} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-indigo-400/40 hover:bg-white/10">
+                    {project.liveUrl ? (
+                        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:opacity-90">
+                            Live Link <ExternalLink className="h-4 w-4" />
+                        </a>
+                    ) : (
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-500 cursor-default">
+                            Not Deployed
+                        </span>
+                    )}
+                    <a href={project.repoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-indigo-400/40 hover:bg-white/10">
                         GitHub <Code2 className="h-4 w-4" />
                     </a>
                 </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, MapPin, Send, Clock3 } from 'lucide-react';
 import RevealSection from '../RevealSection';
 import SectionHeading from '../SectionHeading';
@@ -54,15 +55,18 @@ export default function ContactSection({ contact, socials, onNotify }) {
         setLoading(true);
 
         try {
-            const response = await fetch(`https://formspree.io/f/${contact.formspreeId}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(form),
-            });
-
-            if (!response.ok) {
-                throw new Error('Unable to send the message right now.');
-            }
+            await emailjs.send(
+                contact.emailjsServiceId,
+                contact.emailjsTemplateId,
+                {
+                    from_name: form.name,
+                    from_email: form.email,
+                    subject: form.subject,
+                    message: form.message,
+                    to_email: contact.email,
+                },
+                contact.emailjsPublicKey,
+            );
 
             setForm({ name: '', email: '', subject: '', message: '' });
             onNotify({
@@ -70,11 +74,11 @@ export default function ContactSection({ contact, socials, onNotify }) {
                 title: 'Message sent',
                 message: 'Thanks for reaching out. I will get back to you soon.',
             });
-        } catch (error) {
+        } catch {
             onNotify({
                 type: 'error',
                 title: 'Message failed',
-                message: error.message,
+                message: 'Unable to send the message right now. Please try again later.',
             });
         } finally {
             setLoading(false);
@@ -86,8 +90,8 @@ export default function ContactSection({ contact, socials, onNotify }) {
             <div className="mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow="Contact"
-                    title="Let’s talk about the next build."
-                    description="The form posts to a Laravel API route, while the left column keeps the contact details and social links visible."
+                    title="Let's talk about the next build."
+                    description="Fill in the form and I'll get back to you as soon as possible."
                 />
 
                 <div className="mt-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
@@ -148,7 +152,7 @@ export default function ContactSection({ contact, socials, onNotify }) {
                             disabled={loading}
                             className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
                         >
-                            Send Message <Send className="h-4 w-4" />
+                            {loading ? 'Sending…' : 'Send Message'} <Send className="h-4 w-4" />
                         </button>
                     </form>
                 </div>

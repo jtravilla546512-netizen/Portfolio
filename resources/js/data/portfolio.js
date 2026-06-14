@@ -2,7 +2,7 @@ export const portfolioData = {
     meta: {
         name: 'Jomarie T. Travilla',
         title: 'Jomarie Travilla | Full Stack Developer',
-        description: '4th Year CS Student & aspiring Full Stack Developer based in Davao City. Building real-world apps through curiosity, code, and a love for vibe coding.',
+        description: '3rd Year CS Student & aspiring Full Stack Developer based in Davao City. Building real-world apps through curiosity, code, and a love for vibe coding.',
     },
 
     hero: {
@@ -21,11 +21,11 @@ export const portfolioData = {
     ],
 
     about: {
-        bio: "I'm a 4th-year Bachelor of Science in Computer Science student and junior developer who codes with intention. My approach? Vibe coding — using AI tools to accelerate development while keeping a solid grip on the fundamentals of programming. I believe the best developers aren't those who memorize every syntax, but those who know how to think through problems and ship working solutions.\n\nOver 4 years of hands-on experience across Java, Python, PHP, HTML, CSS, SQL, and Laravel, I've built everything from full-stack service management systems to mobile music apps and algorithm simulations. I'm currently seeking an internship where I can contribute, grow, and prove that vibe coding is a real skill.",
+        bio: "I'm a 3rd-year Bachelor of Science in Computer Science student at the University of Mindanao and a junior developer who codes with intention. My approach? Vibe coding — using AI tools to accelerate development while keeping a solid grip on the fundamentals of programming. I believe the best developers aren't those who memorize every syntax, but those who know how to think through problems and ship working solutions.\n\nWith 4+ years of hands-on experience across Java, Python, PHP, HTML, CSS, SQL, and Laravel, I've built everything from full-stack service management systems to mobile music apps and algorithm simulations. I'm currently seeking an internship where I can contribute, grow, and prove that vibe coding is a real skill.",
         yearsCoding: '4+',
         projectsBuilt: '3+',
-        certificationsEarned: '10+',
-        learning: 'React + Inertia.js + Advanced Laravel Patterns',
+        certificationsEarned: '5+',
+        learning: 'Flutter + Dart + Advanced Laravel Patterns',
     },
 
     skills: {
@@ -43,8 +43,9 @@ export const portfolioData = {
             { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
             { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
         ],
-        'Tools & Others': [
-            { name: 'Machine Learning', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+        'Mobile & Tools': [
+            { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+            { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
             { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
             { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
         ],
@@ -63,19 +64,19 @@ export const portfolioData = {
         {
             featured: false,
             title: 'Bridge Simulation',
-            description: 'A deterministic bridge algorithm simulation — a pure logic project exploring graph traversal and simulation concepts. No UI fluff, just clean computational thinking in code.',
-            stack: ['JavaScript', 'HTML', 'CSS'],
+            description: 'A deterministic bridge algorithm simulation built in Python — exploring graph traversal and computational logic. A pure problem-solving project focused on clean thinking in code. Desktop application, not web-deployed.',
+            stack: ['Python'],
             image: '/images/project-placeholder.svg',
-            liveUrl: '#',
+            liveUrl: null,
             repoUrl: 'https://github.com/jtravilla546512-netizen/Bridge-Simulation',
         },
         {
             featured: false,
             title: 'Spotnik',
-            description: 'A mobile-inspired Spotify clone. Browse, play, and discover music with a sleek mobile-first UI. Built to explore mobile UX design patterns and media playback in the browser.',
-            stack: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+            description: 'A Spotify-inspired music application built with Flutter and Dart for mobile. Browse, play, and discover music with a sleek mobile-first design. Built to explore mobile UX patterns and media playback. Not web-deployed — mobile/desktop app.',
+            stack: ['Flutter', 'Dart', 'Python'],
             image: '/images/project-placeholder.svg',
-            liveUrl: '#',
+            liveUrl: null,
             repoUrl: 'https://github.com/jtravilla546512-netizen/Spotnik',
         },
     ],
@@ -85,19 +86,19 @@ export const portfolioData = {
             year: '2021',
             title: 'Hello World',
             company: 'Self-Taught',
-            description: 'Wrote my first lines of code. Java was the language that started it all.',
+            description: 'Wrote my first lines of code. Java was the language that started it all — and it set the foundation for everything that followed.',
         },
         {
-            year: '2021 - Present',
+            year: 'Aug 2023 – Present',
             title: 'BS Computer Science Student',
-            company: 'University',
-            description: '4th year CS student building a strong foundation in algorithms, data structures, software engineering, and machine learning concepts.',
+            company: 'University of Mindanao',
+            description: 'Currently a 3rd year CS student building a strong foundation in algorithms, data structures, software engineering, and machine learning. Entering 4th year in August 2026.',
         },
         {
-            year: '2022 - Present',
-            title: 'Junior Full Stack Developer',
-            company: 'Self-Directed Projects',
-            description: 'Started building real-world projects using PHP, Laravel, and vanilla JavaScript. Embraced vibe coding as a development methodology — using AI tools while staying grounded in programming fundamentals.',
+            year: '2025',
+            title: 'Started Building Real Projects',
+            company: 'Self-Directed',
+            description: 'Began developing full-stack applications independently — combining classroom knowledge with hands-on product thinking and AI-assisted development.',
         },
         {
             year: '2025',
@@ -106,10 +107,10 @@ export const portfolioData = {
             description: 'Successfully designed, built, and deployed a full production-grade service management system with POS, inventory, and analytics for a real business.',
         },
         {
-            year: '2026',
-            title: 'Internship Ready',
-            company: 'Seeking Opportunity',
-            description: 'Actively looking for an internship to apply my skills in a professional setting, collaborate with a team, and grow as a developer.',
+            year: 'Aug 2026',
+            title: 'Entering 4th Year',
+            company: 'University of Mindanao',
+            description: 'Advancing to 4th year BS Computer Science while actively seeking an internship to apply skills in a professional setting and grow as a developer.',
         },
     ],
 
@@ -135,12 +136,29 @@ export const portfolioData = {
             thumbnail: '/images/Network Security.png',
             image: '/images/Network Security.png',
         },
+        {
+            name: 'Python Essentials',
+            issuer: 'Cisco Networking Academy',
+            date: '2024',
+            thumbnail: '/images/python.png',
+            image: '/images/python.png',
+        },
+        {
+            name: 'Python Basics',
+            issuer: 'Cisco Networking Academy',
+            date: '2024',
+            thumbnail: '/images/python basics.png',
+            image: '/images/python basics.png',
+        },
     ],
 
     contact: {
         email: 'jomtravilla.dev@gmail.com',
         location: '09482414092 · Davao City, Philippines',
         responseTime: 'Usually replies within 1 hour',
-        formspreeId: 'YOUR_FORM_ID',
+        // EmailJS credentials — replace with your own from emailjs.com
+        emailjsServiceId: 'YOUR_SERVICE_ID',
+        emailjsTemplateId: 'YOUR_TEMPLATE_ID',
+        emailjsPublicKey: 'YOUR_PUBLIC_KEY',
     },
 };
