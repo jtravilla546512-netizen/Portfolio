@@ -54,15 +54,14 @@ export default function ContactSection({ contact, socials, onNotify }) {
         setLoading(true);
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch(`https://formspree.io/f/${contact.formspreeId}`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(form),
             });
 
             if (!response.ok) {
-                const errorPayload = await response.json().catch(() => null);
-                throw new Error(errorPayload?.message || 'Unable to send the message right now.');
+                throw new Error('Unable to send the message right now.');
             }
 
             setForm({ name: '', email: '', subject: '', message: '' });
