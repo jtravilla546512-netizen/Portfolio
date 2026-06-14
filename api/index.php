@@ -1,7 +1,5 @@
 <?php
 
-define('LARAVEL_START', microtime(true));
-
 // Vercel has a read-only filesystem except /tmp
 // Create writable directories in /tmp for Laravel storage
 $storagePath = '/tmp/laravel/storage';
