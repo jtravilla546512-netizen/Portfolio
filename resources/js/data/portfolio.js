@@ -157,8 +157,8 @@ export const portfolioData = {
         location: '09482414092 · Davao City, Philippines',
         responseTime: 'Usually replies within 1 hour',
         // EmailJS credentials — replace with your own from emailjs.com
-        emailjsServiceId: 'YOUR_SERVICE_ID',
-        emailjsTemplateId: 'YOUR_TEMPLATE_ID',
-        emailjsPublicKey: 'YOUR_PUBLIC_KEY',
+        emailjsServiceId: 'service_w5glxpw',
+        emailjsTemplateId: 'template_ez6wpog',
+        emailjsPublicKey: 'PvELUkjaU2EZwa4y1',
     },
 };
