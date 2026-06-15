@@ -119,7 +119,7 @@ export default function HeroSection({ hero, socials, roles, onNavigate }) {
                         />
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.12),transparent_55%)]" />
-                    <div className="absolute -bottom-6 left-8 rounded-2xl border border-white/10 bg-slate-950/90 px-4 py-3 shadow-2xl shadow-black/40 backdrop-blur-xl">
+                    <div className="absolute -bottom-6 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-2xl border border-white/10 bg-slate-950/90 px-4 py-3 shadow-2xl shadow-black/40 backdrop-blur-xl">
                         <p className="font-code text-xs uppercase tracking-[0.3em] text-indigo-300/80">Available</p>
                         <p className="mt-1 text-sm text-slate-200">Open to freelance and full-time roles</p>
                     </div>
