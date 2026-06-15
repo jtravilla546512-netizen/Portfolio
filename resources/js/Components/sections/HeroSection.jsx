@@ -68,9 +68,11 @@ export default function HeroSection({ hero, socials, roles, onNavigate }) {
                         </button>
                         <a
                             href={hero.resumeUrl}
+                            target="_blank"
+                            rel="noreferrer"
                             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-slate-100 transition hover:border-indigo-400/40 hover:bg-white/10"
                         >
-                            Download CV <Download className="h-4 w-4" />
+                            View Resume <Download className="h-4 w-4" />
                         </a>
                     </motion.div>
 

@@ -9,7 +9,7 @@ export const portfolioData = {
         name: 'Jomarie T. Travilla',
         location: 'Davao City, Philippines',
         tagline: 'I build real things with AI-assisted code — and I actually understand what I ship.',
-        resumeUrl: '/resume.pdf',
+        resumeUrl: '/resume.html',
         profileImage: '/images/ID picture.png',
     },
 
