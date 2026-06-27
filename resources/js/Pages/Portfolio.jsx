@@ -123,30 +123,6 @@ export default function Portfolio() {
                             </div>
                         </section>
 
-                        {/* TECH STACK */}
-                        <section>
-                            <h2 className="text-base font-bold text-gray-900">Tech Stack</h2>
-                            <div className="mt-3 space-y-3">
-                                {Object.entries(skills).map(([category, items]) => (
-                                    <div key={category}>
-                                        <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
-                                            {category}
-                                        </p>
-                                        <div className="flex flex-wrap gap-1.5">
-                                            {items.map((skill) => (
-                                                <span
-                                                    key={skill.name}
-                                                    className="rounded-md border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs text-gray-700"
-                                                >
-                                                    {skill.name}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
                         {/* RECENT PROJECTS */}
                         <section>
                             <div className="flex items-center justify-between">
@@ -259,6 +235,30 @@ export default function Portfolio() {
                                                 <span className="flex-shrink-0 text-xs text-gray-400">{entry.year}</span>
                                             </div>
                                             <p className="mt-0.5 text-xs text-gray-500">{entry.company}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* TECH STACK */}
+                        <section>
+                            <h2 className="text-base font-bold text-gray-900">Tech Stack</h2>
+                            <div className="mt-3 space-y-3">
+                                {Object.entries(skills).map(([category, items]) => (
+                                    <div key={category}>
+                                        <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                                            {category}
+                                        </p>
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {items.map((skill) => (
+                                                <span
+                                                    key={skill.name}
+                                                    className="rounded-md border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs text-gray-700"
+                                                >
+                                                    {skill.name}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 ))}
