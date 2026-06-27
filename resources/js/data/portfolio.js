@@ -2,7 +2,7 @@ export const portfolioData = {
     meta: {
         name: 'Jomarie T. Travilla',
         title: 'Jomarie Travilla | Full Stack Developer',
-        description: '3rd Year CS Student & aspiring Full Stack Developer based in Davao City. Building real-world apps through curiosity, code, and a love for vibe coding.',
+        description: '3rd Year BS Computer Science student at the University of Mindanao and junior full-stack developer based in Davao City. Building clean, functional, and production-ready web applications.',
     },
 
     hero: {
@@ -21,7 +21,7 @@ export const portfolioData = {
     ],
 
     about: {
-        bio: "I'm a 3rd-year Bachelor of Science in Computer Science student at the University of Mindanao and a junior developer who codes with intention. My approach? Vibe coding — using AI tools to accelerate development while keeping a solid grip on the fundamentals of programming. I believe the best developers aren't those who memorize every syntax, but those who know how to think through problems and ship working solutions.\n\nWith 4+ years of hands-on experience across Java, Python, PHP, HTML, CSS, SQL, and Laravel, I've built everything from full-stack service management systems to mobile music apps and algorithm simulations. I'm currently seeking an internship where I can contribute, grow, and prove that vibe coding is a real skill.",
+        bio: "I'm a 3rd-year Bachelor of Science in Computer Science student at the University of Mindanao and a junior full-stack developer. I build web applications with intention — combining strong programming fundamentals with modern frameworks and tools to deliver clean, functional, and production-ready software.\n\nWith 4+ years of hands-on experience across Java, Python, PHP, JavaScript, SQL, and Laravel, I have built everything from full-stack service management systems to mobile applications and algorithm simulations. I am currently seeking an internship where I can contribute meaningfully, grow alongside experienced professionals, and put my skills to work in a real-world environment.",
         yearsCoding: '4+',
         projectsBuilt: '3+',
         certificationsEarned: '5+',

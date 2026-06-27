@@ -6,7 +6,7 @@
 
 @layer base {
 	:root {
-		color-scheme: dark;
+		color-scheme: light;
 	}
 
 	html {
@@ -14,12 +14,8 @@
 	}
 
 	body {
-		@apply bg-slate-950 text-slate-100 antialiased;
+		@apply bg-white text-gray-900 antialiased;
 		font-family: 'Inter', theme('fontFamily.sans');
-	}
-
-	.dark body {
-		color-scheme: dark;
 	}
 
 	::selection {
