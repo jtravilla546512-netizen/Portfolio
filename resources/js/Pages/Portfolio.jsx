@@ -8,10 +8,41 @@ const socialIconMap = { mail: Mail };
 
 export default function Portfolio() {
     const [showAllCerts, setShowAllCerts] = useState(false);
+    const [selectedCert, setSelectedCert] = useState(null);
     const visibleCerts = showAllCerts ? certifications : certifications.slice(0, 4);
+    const reversedExperience = [...experience].reverse();
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900 antialiased">
+
+            {/* CERT IMAGE MODAL */}
+            {selectedCert && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+                    onClick={() => setSelectedCert(null)}
+                >
+                    <div
+                        className="relative max-h-[90vh] max-w-2xl w-full rounded-xl overflow-hidden shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setSelectedCert(null)}
+                            className="absolute right-3 top-3 z-10 rounded-full bg-black/50 px-2.5 py-1 text-xs text-white hover:bg-black/70"
+                        >
+                            ✕ Close
+                        </button>
+                        <img
+                            src={selectedCert.image}
+                            alt={selectedCert.name}
+                            className="w-full object-contain bg-white"
+                        />
+                        <div className="bg-white px-4 py-3">
+                            <p className="text-sm font-semibold text-gray-900">{selectedCert.name}</p>
+                            <p className="text-xs text-gray-500">{selectedCert.issuer} · {selectedCert.date}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
             <div className="mx-auto max-w-5xl px-6 py-12">
 
                 {/* ── HERO ── */}
@@ -195,13 +226,17 @@ export default function Portfolio() {
                             </div>
                             <div className="mt-3 divide-y divide-gray-100">
                                 {visibleCerts.map((cert) => (
-                                    <div key={cert.name} className="flex items-center justify-between py-3">
+                                    <button
+                                        key={cert.name}
+                                        onClick={() => setSelectedCert(cert)}
+                                        className="flex w-full items-center justify-between py-3 text-left transition hover:opacity-70"
+                                    >
                                         <div>
                                             <p className="text-sm font-semibold text-gray-900">{cert.name}</p>
                                             <p className="text-xs text-gray-500">{cert.issuer}</p>
                                         </div>
                                         <span className="text-xs text-gray-400">{cert.date}</span>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </section>
@@ -215,7 +250,7 @@ export default function Portfolio() {
                         <section>
                             <h2 className="text-base font-bold text-gray-900">Experience</h2>
                             <div className="mt-3 space-y-4">
-                                {experience.map((entry) => (
+                                {reversedExperience.map((entry) => (
                                     <div key={`${entry.year}-${entry.title}`} className="flex gap-3">
                                         <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-gray-300" />
                                         <div className="flex-1">
