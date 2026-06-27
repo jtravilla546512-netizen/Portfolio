@@ -55,7 +55,7 @@ export const portfolioData = {
         {
             featured: true,
             title: 'CoolMasterSpecialist',
-            description: 'A full-stack appliance repair service management system with 7 integrated subsystems: bookings, POS, inventory, customer management, technician management, analytics, and PDF reports. Built for a real business and deployed live.',
+            description: 'Full-stack service management system for an appliance repair business — bookings, POS, inventory, analytics, and PDF reports, deployed live.',
             stack: ['Laravel', 'PHP', 'Tailwind', 'MySQL', 'JavaScript', 'Vite'],
             image: '/images/coolmaster.png',
             liveUrl: 'https://coolmasterspecialist.page',
@@ -64,7 +64,7 @@ export const portfolioData = {
         {
             featured: true,
             title: 'Honda Click 125i CVT Tuning Simulator',
-            description: 'An interactive browser-based simulator for tuning the Honda Click 125i CVT. Adjust flyball weight, pulley angles, spring stiffness, tire size, and rider weight — then see live charts for top speed, 0–60 km/h time, and RPM-vs-speed curves, plus a Canvas animation of the pulleys and belt. Built with a pure JS physics engine and shareable configurations via URL hash.',
+            description: 'Browser-based CVT tuning simulator for the Honda Click 125i — adjust parts and see real-time speed, RPM, and acceleration charts powered by a JS physics engine.',
             stack: ['Vue 3', 'Vite', 'Chart.js', 'JavaScript', 'Canvas API'],
             image: '/images/project-placeholder.svg',
             liveUrl: 'https://honda-click-cvt-tune.vercel.app/',
@@ -73,7 +73,7 @@ export const portfolioData = {
         {
             featured: false,
             title: 'Bridge Simulation',
-            description: 'A deterministic bridge algorithm simulation built in Python — exploring graph traversal and computational logic. A pure problem-solving project focused on clean thinking in code. Desktop application, not web-deployed.',
+            description: 'Python desktop app that simulates a deterministic bridge algorithm using graph traversal and computational logic.',
             stack: ['Python'],
             image: '/images/project-placeholder.svg',
             liveUrl: null,
@@ -82,7 +82,7 @@ export const portfolioData = {
         {
             featured: false,
             title: 'Spotnik',
-            description: 'A Spotify-inspired music application built with Flutter and Dart for mobile. Browse, play, and discover music with a sleek mobile-first design. Built to explore mobile UX patterns and media playback. Not web-deployed — mobile/desktop app.',
+            description: 'Spotify-inspired mobile music app built with Flutter and Dart for browsing and playing music with a clean mobile-first UI.',
             stack: ['Flutter', 'Dart', 'Python'],
             image: '/images/project-placeholder.svg',
             liveUrl: null,
