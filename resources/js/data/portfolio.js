@@ -23,7 +23,7 @@ export const portfolioData = {
     about: {
         bio: "I'm a 3rd-year Bachelor of Science in Computer Science student at the University of Mindanao and a junior full-stack developer. I build web applications with intention — combining strong programming fundamentals with modern frameworks and tools to deliver clean, functional, and production-ready software.\n\nWith 4+ years of hands-on experience across Java, Python, PHP, JavaScript, SQL, and Laravel, I have built everything from full-stack service management systems to mobile applications and algorithm simulations. I am currently seeking an internship where I can contribute meaningfully, grow alongside experienced professionals, and put my skills to work in a real-world environment.",
         yearsCoding: '4+',
-        projectsBuilt: '3+',
+        projectsBuilt: '4+',
         certificationsEarned: '5+',
         learning: 'Flutter + Dart + Advanced Laravel Patterns',
     },
@@ -60,6 +60,15 @@ export const portfolioData = {
             image: '/images/coolmaster.png',
             liveUrl: 'https://coolmasterspecialist.page',
             repoUrl: 'https://github.com/jtravilla546512-netizen/SoftEng2',
+        },
+        {
+            featured: true,
+            title: 'Honda Click 125i CVT Tuning Simulator',
+            description: 'An interactive browser-based simulator for tuning the Honda Click 125i CVT. Adjust flyball weight, pulley angles, spring stiffness, tire size, and rider weight — then see live charts for top speed, 0–60 km/h time, and RPM-vs-speed curves, plus a Canvas animation of the pulleys and belt. Built with a pure JS physics engine and shareable configurations via URL hash.',
+            stack: ['Vue 3', 'Vite', 'Chart.js', 'JavaScript', 'Canvas API'],
+            image: '/images/project-placeholder.svg',
+            liveUrl: 'https://honda-click-cvt-tune.vercel.app/',
+            repoUrl: 'https://github.com/jtravilla546512-netizen/Honda-Click-CVT-Tune',
         },
         {
             featured: false,
