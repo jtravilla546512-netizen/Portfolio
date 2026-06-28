@@ -71,6 +71,15 @@ export const portfolioData = {
             repoUrl: 'https://github.com/jtravilla546512-netizen/Honda-Click-CVT-Tune',
         },
         {
+            featured: true,
+            title: 'Dakop',
+            description: 'Laravel-based checkpoint reporting web app with a dedicated API backend and web frontend for managing and tracking field checkpoints.',
+            stack: ['Laravel', 'PHP', 'Blade', 'JavaScript'],
+            image: '/images/project-placeholder.svg',
+            liveUrl: 'https://dakop-rose.vercel.app',
+            repoUrl: 'https://github.com/jtravilla546512-netizen/Dakop',
+        },
+        {
             featured: false,
             title: 'Bridge Simulation',
             description: 'Python desktop app that simulates a deterministic bridge algorithm using graph traversal and computational logic.',

@@ -164,22 +164,19 @@ export default function Portfolio() {
                                                     className="flex items-center gap-1 font-mono text-[11px] text-gray-500 transition hover:text-gray-900"
                                                 >
                                                     <ExternalLink className="h-3 w-3" />
-                                                    {project.liveUrl.replace('https://', '')}
+                                                    {project.liveUrl.replace('https://', '').replace(/\/$/, '')}
                                                 </a>
                                             ) : (
-                                                <span className="flex items-center gap-1 font-mono text-[11px] text-gray-400">
-                                                    Not deployed
-                                                </span>
+                                                <a
+                                                    href={project.repoUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="flex items-center gap-1 font-mono text-[11px] text-gray-500 transition hover:text-gray-900"
+                                                >
+                                                    <Code2 className="h-3 w-3" />
+                                                    Source
+                                                </a>
                                             )}
-                                            <a
-                                                href={project.repoUrl}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="flex items-center gap-1 font-mono text-[11px] text-gray-500 transition hover:text-gray-900"
-                                            >
-                                                <Code2 className="h-3 w-3" />
-                                                Source
-                                            </a>
                                         </div>
                                     </div>
                                 ))}
