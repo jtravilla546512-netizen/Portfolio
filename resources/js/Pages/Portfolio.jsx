@@ -8,8 +8,10 @@ const socialIconMap = { mail: Mail };
 
 export default function Portfolio() {
     const [showAllCerts, setShowAllCerts] = useState(false);
+    const [showAllProjects, setShowAllProjects] = useState(false);
     const [selectedCert, setSelectedCert] = useState(null);
     const visibleCerts = showAllCerts ? certifications : certifications.slice(0, 4);
+    const visibleProjects = showAllProjects ? projects : projects.slice(0, 4);
     const reversedExperience = [...experience].reverse();
 
     return (
@@ -127,17 +129,18 @@ export default function Portfolio() {
                         <section>
                             <div className="flex items-center justify-between">
                                 <h2 className="text-base font-bold text-gray-900">Recent Projects</h2>
-                                <a
-                                    href="https://github.com/jtravilla546512-netizen"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-1 text-xs text-gray-400 transition hover:text-gray-900"
-                                >
-                                    View All <ExternalLink className="h-3 w-3" />
-                                </a>
+                                {projects.length > 4 && (
+                                    <button
+                                        onClick={() => setShowAllProjects((p) => !p)}
+                                        className="flex items-center gap-1 text-xs text-gray-400 transition hover:text-gray-900"
+                                    >
+                                        {showAllProjects ? 'Show Less' : `View All ${projects.length}`}
+                                        <ExternalLink className="h-3 w-3" />
+                                    </button>
+                                )}
                             </div>
                             <div className="mt-3 divide-y divide-gray-100">
-                                {projects.map((project) => (
+                                {visibleProjects.map((project) => (
                                     <div key={project.title} className="py-4">
                                         <div className="flex items-start justify-between gap-4">
                                             <p className="text-sm font-semibold text-gray-900">{project.title}</p>
